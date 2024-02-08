@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		// var let const
+
+		// var,let and const keywords are used for declaring variables.
+
+		// var is the old way of declaring variables.
+
+		// let and const are new way of declaring variables. They are introduced in ES6.
+
+		// 1.var
+		var a=2;
+		console.log(a);
+		// var can be update
+		a=3;
+		console.log(a);
+		// var can be redeclared
+		var a=4;
+		console.log(a);
+		// var can be or can not be intialize during decleration
+		// 1.initialize duirng decleration
+		var a=7;
+		console.log(a);
+		// 2.can not intilaize during decleration
+		var b;
+		console.log(b);
+		b=2;
+		console.log(b);
+		// we can access it without initilzation
+		console.log(c);
+		var c='later';
+		//  var has function scope means it can access inside this function only
+		function man(){
+			var o=4;
+			console.log(o); // output 4
+		}
+		man(); 
+		console.log(o) // output ReferenceError: o is not defined
+
+
+		// 2.let
+		let i=1;
+		console.log(i);
+		// let can be update
+		i=2;
+		console.log(i);
+		// let can not be redeclared(it can give syntax error indentifier already declared);
+		// let i=4;
+		// console.log(i);
+		// let can be or can not be intialize during decleration
+		// 1.initialize duirng decleration
+		let x=0;
+		console.log(x);
+		// 2.can not intilaize during decleration
+		let z;
+		console.log(z);
+		z=2;
+		console.log(z);
+		// cannot accessed without initialization(it give  ReferenceError: Cannot access 'w' before initialization).
+		// console.log(w);
+		// let w='later';
+		//  let has block scope means it can access inside this block only
+		if(true){
+			let n=5;
+			console.log(n); // output 5
+		}
+		console.log(n) // output ReferenceError: n is not defined
+
+
+		// 3.const
+		const q=1;
+		console.log(q); 
+		// const can not be update(it can give type error assignment to constant variable)
+		// q=2;
+		// console.log(q);
+		// const can not be recdeclared(it can give syntax error indentifier already declared)
+		// const q=2;
+		// console.log(q);
+		// const must be intialize during decleration
+		const y=6;
+		console.log(y);
+		// if you can't intialize during declaration it will give syntax error missing initializer in const declaration
+		// const l;
+		// l=3;
+		// console.log(l);
+		// cannot accessed without initialization(it give  ReferenceError: Cannot access 'w' before initialization).
+		// console.log(w);
+		// const w='later';
+		//  const has block scope means it can access inside this block only
+		if(true){
+			const n=5;
+			console.log(n); // output 5
+		}
+		console.log(n) // output ReferenceError: n is not defined
+	</script>
+
+
+</body>
+</html>

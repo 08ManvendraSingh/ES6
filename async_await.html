@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- async and await -->
+	<script type="text/javascript">
+	//  async function test(){
+	// 		return('hello');
+	// 	}
+	// 	// console.log(test());
+	// test().then((res)=>console.log(res));
+
+	// let test=async ()=>'hello';
+	// test().then((res)=>console.log(res));
+
+	// let test=async ()=>{
+	// 		console.log('1st:message')
+	// 		await console.log('2st:message')
+	// 		console.log('3st:message')
+	// }
+	// console.log('4th:message');
+	// console.log(test());
+	// console.log('5th:message');
+
+	// let test=async ()=>{
+	// 		console.log('1st:message');
+	// 		let res=await fetch("https://jsonplaceholder.typicode.com/posts");
+	// 		console.log(res);
+	// 		console.log('3st:message');
+	// }
+	// console.log('4th:message');
+	// console.log(test());
+	// console.log('5th:message');
+
+	// let test=async ()=>{
+	// 	console.log('1st:message');
+	// 	let res=await fetch("https://jsonplaceholder.typicode.com/posts");
+	// 	console.log('2st:message');
+	// 	let st=await res.json();
+	// 	return st;
+	// }
+	// console.log('4th:message');
+	// console.log(test());
+	// console.log('5th:message');
+
+	// let test=async ()=>{
+	// 	let res=await fetch("https://jsonplaceholder.typicode.com/posts");
+	// 	let st=await res.json();
+	// 	return st;
+	// }
+	// test().then((x)=>{
+	// 	console.log(x);
+	// }).catch((err)=>{
+	// 	console.log(err);
+	// })
+
+	let test=async ()=>{
+		return (await fetch("https://jsonplaceholder.typicode.com/posts")).json();
+	}
+	test().then((x)=>{
+		console.log(x);
+	}).catch((err)=>{
+		console.log(err);
+	})
+
+
+
+	</script>
+
+</body>
+</html>

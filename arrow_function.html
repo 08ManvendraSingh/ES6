@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		// Arrow function
+		// introduce in es6 2015
+		// arrow function allow us to write shorter function syntax
+
+		// Before arrow function we have 2 ways to write function
+		// 1. function decleration
+		function hello(){
+			console.log('hi');
+		}
+		hello();
+		// 2. function expression
+		let a=function hello(){console.log('hi1')};
+		a();
+
+		// But now we have arrow function
+		let hey=()=>{console.log('heyyy')};
+		hey();
+
+		// conditions for arrow functions
+		// 1. when we have only one parameter then we can use or can not use ()
+		// with ()
+		let hey1=(name)=>{console.log(name)};
+		hey1('hey1');
+		// without ()
+		let hey2=name=>{console.log(name)};
+		hey2('hey2');
+
+		// 2.when we have less than one parameter or more than one parameter then we should compulsory use ()
+		let hi=(name1,name2)=>{console.log(name1,name2)}
+		hi('manu','manu1');
+
+		// 3.when we have only 1 statement then we can or can not use {} and return keyword;
+		// with {} and return keyword;
+		let ok=()=>{return 'okkk'};
+		console.log(ok());
+		// without {} and return keyword; 
+		let ok1=()=>'okkk1';
+		console.log(ok1());
+
+	</script>
+
+</body>
+</html>

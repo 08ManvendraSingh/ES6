@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- Spread Parameter(operator) -->
+	<!-- spread operator spread all the things -->
+	<!-- spread operater is only used in iterable things such as string,array,object  -->
+	<!-- syntax: ...manu -->
+	<!-- you can use any name after ... -->
+	<!-- spread operater is used anywhere except parameter box -->
+	<!-- spread opertoer is used to copy one array into other -->
+
+	<script type="text/javascript">
+		// 1.eg:
+		var a=[1,2,3,4];
+		console.log(...a);
+
+		// 2.eg:
+		var b='manu';
+		console.log(...b);
+
+		// 3.eg:
+		var c=[1,2,3];
+		var d=[6,7,...a];
+		console.log(d);
+
+		// 4.eg:
+		var e=[2,3,4];
+		var f=[7,4];
+		var g=[...e,...f];
+		console.log(g);
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- Ternary Operator -->
+	<!-- ternary operator eveluates a condition and execute a block of code based on the condition -->
+	<!-- syntax    condition ? expression1 : expression2    -->
+	<!-- A ternary operator can be used to replace an if..else statement in certain situations -->
+
+	<script type="text/javascript">
+		// without ternary
+		var a=4;
+		if(a>3){
+			console.log('greater');
+		}
+		else{
+			console.log('smaller');
+		}
+
+		// with ternary 
+		var a=4;
+		(a>3)?console.log('greater'):console.log('smaller');
+
+		// nested ternary
+		var a1= 3;
+		var a= (a1 >= 0) ? (a1 == 0 ? "zero" : "positive") : "negative";
+		console.log(`The number is ${a}.`);
+	</script>
+	
+</body>
+</html>

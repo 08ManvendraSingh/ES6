@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Scope
+		// Global scope, Function scope, Block scope
+		// 1.Global scope
+		// Note --> variable declared outside function or block{} can be accessed anywhere inside function or block{};
+		// var,let,const all three have global scope;
+		var a=2;
+		console.log(a);
+		function manu(){
+			console.log(a);
+		} 
+		manu();
+		if(a>1){
+			console.log(a);
+		}
+
+		let b=1;
+		console.log(b);
+		function manu1(){
+			console.log(b);
+		}
+		manu1();
+		if(b>0){
+			console.log(b);
+		}
+
+		const c=3;
+		console.log(c);
+		function manu2(){
+			console.log(c);
+		}
+		manu2();
+		if(c>1){
+			console.log(c);
+		}
+
+
+		// Function scope
+		// Note --> variable declared inside the block{} of function can not be accessed outside the block{} of that function
+		// var,let,const all three have function scope;
+		function man(){
+			var o=4;
+			console.log(o);
+		}
+		man();
+
+		function man1(){
+			let u=4;
+			console.log(u);
+		}
+		man1();
+
+		function man2(){
+			const s=4;
+			console.log(s);
+		}
+		man2();
+		// if we try to access variable outside the function that is declared inside function it will give reference error; 
+		// console.log(o);
+
+
+		// Block scope
+		// Note --> variable declared with var inside block{} these brackets does not follow block scope and they act as global scope
+		var g=2
+		if(g>1){
+			var w=5;
+			console.log(w);
+		}
+		console.log(w);
+		// Note --> variable declared with let, const follow block scope and they can only be accessed inside that block{} only in which they are declared
+		let v=1;
+		if(v>0){
+			let n=5;
+			console.log(n);
+		}
+
+		const f=1;
+		if(f>0){
+			const k=5;
+			console.log(k);
+		}
+		// if we try to access variable outside the block that is declared inside block{} it will give reference error n is not define; 
+		// console.log(n);
+		// console.log(k);
+	</script>
+
+</body>
+</html>

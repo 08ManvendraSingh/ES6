@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- callback function -->
+	<!-- a function that is passed as an argument to another function-->
+
+	<script type="text/javascript">
+		// 1.eg
+		function hi(ok){
+			ok();
+		}
+		hi(
+			function ok(){
+				console.log('hi');
+			}
+			);
+
+		// 2.eg
+		function ok1(){
+			console.log('ok');
+		}
+
+		function hi1(ok1){
+			ok1();
+		}
+
+		hi1(ok1);
+
+		// 3.eg
+		function hi1(){
+			function ok1(){
+				console.log('ok');
+			}	
+		}
+		hi1();
+
+		// 4.eg
+		setTimeout(function hello(){
+ 			console.log('callback called')
+ 		},2000)
+
+	</script>
+
+ <script type="text/javascript">
+// a = (fetch('https://api.github.com/users'))
+// console.log(a)
+// b = a.then((data)=> console.log(data))
+// // // console.log(b)
+// // c = b.then((data2)=>{return data2[2]} )
+// // c.then((data3)=>console.log(data3))
+	
+
+async function Hello(){
+		a = await fetch('https://api.github.com/users')
+		b = await a.json()
+		console.log(c)
+
+	}
+
+
+
+Hello().catch((err)=>console.log(err))
+// console.log()
+
+
+
+ </script>
+</body>
+</html>

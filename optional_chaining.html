@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- Optional Chaining -->
+	<!-- Optional Chaining is introduced in ECMAScript 2020 also known as ES11 -->
+	<!-- Syntax for Optional Chaining: ?. -->
+	<!-- Useful to avoid errors -->
+	<!-- This will be useful when we try to access deeply object properties. -->
+
+
+	<script type="text/javascript">
+	// 1.eg(without optinal chaining)
+		var a={
+			name:'manu',
+			// address:{
+			// 	city:'jaipur'
+			// }
+		}
+		// console.log(a.address.city);
+
+	// with optional chaining
+		console.log(a?.address?.city);
+
+	// 2.eg(without optinal chaining
+		var b={
+			userId:'33322',
+			account:{
+				accountToken:'AKDJ3D8',
+				holder:{
+					// profile:{
+					// 	fname:'manu',
+					// 	lname:'singh',
+					// 	bDate:'2001'
+					// }
+				}
+			}
+		}
+
+		// console.log(b.account.holder.profile.fname);
+
+	// with optional chaining
+	    console.log(b?.account?.holder?.profile?.fname)
+
+	// 3.eg(we cant use optional chaining at the time of assigning)
+	    // b?.name='lala';
+	    // console.log(b.name)
+
+	// 4.eg(we can also use optional chaining in function)
+	   console.log(b?.man?.());
+
+	</script>
+
+</body>
+</html>

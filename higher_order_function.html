@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- Higher Order Function -->
+	<!-- a function which takes another function as an arrgument and return function as result -->
+
+
+	<script type="text/javascript">
+		// 1.eg
+		function x(){
+			console.log('hof');
+		}
+
+		function y(x){
+			x();
+		}
+
+		y(x);
+
+		// 2.eg without higher order function
+		const radius=[1,2,3,4];
+		const calculateArea=function(radius){
+			const output=[];
+			for(let i=0;i<radius.length;i++){
+				output.push(Math.PI*radius[i]*radius[i]);
+			}
+			return output;
+		}
+
+		console.log(calculateArea(radius));
+		
+		// 3.eg with higher order function
+
+		const area=function(radius){
+			return Math.PI*radius*radius;
+		}
+
+		const calculate=function(radius,area){
+			const output1=[];
+			for(let a=0;a<radius.length;a++){
+				output1.push(area(radius[a]));
+			}
+			return output1;
+		}
+
+		console.log(calculate(radius, area));
+
+
+		// 3.eg
+		const add=(a,b)=>{
+			return a+b
+		}
+
+		const sub=(a,b)=>{
+			return a-b
+		}
+
+		const calc=(a,b,oper)=>{
+			return oper(a,b)	
+		}
+
+		console.log(calc(2,3,add));
+		console.log(calc(2,3,sub));
+	</script>
+
+
+
+
+
+
+
+</body>
+</html>

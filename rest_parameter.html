@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- Rest parameter(operator) -->
+	<!-- the rest parameter syntax allows a function to accept an indefinite number of arggument as an array -->
+	<!-- syntax: ...manu -->
+	<!-- you can use any name after ... -->
+	<!-- rest parameter will always be the last parameter -->
+
+	<!-- <script type="text/javascript">
+		// 1.eg:
+		function manu(...hello){
+			console.log(hello);
+		}
+		manu();
+		manu(1,2,3);
+
+		// 2.eg:
+		function hi(...hello1){
+			let a=0;
+			for(let i=0;i<hello1.length;i++){
+				a+=hello1[i];
+			}
+			console.log(a);
+		}
+		hi(1,2);
+
+		// 3.eg:
+		function man(...hello2){
+			console.log(hello2);
+		}
+		man('lavi',1,2,3,4);
+
+		// 4.eg:
+		function hey(a,...hello3){
+			console.log(a);
+			console.log(hello3);
+		}
+		hey('lavii',1,2,4,5);
+	</script> -->
+
+	<script type="text/javascript">
+		function manu(a,b){
+			console.log(a+b);
+		}
+		manu(1,2);
+
+		function manu1(...hi){
+			console.log(hi);
+		}
+		manu1();
+		manu1(1,2,3,4,5,6,7,77);
+
+		function man(a,s,f,g,...ok){
+			console.log(ok)
+
+			console.log(a);
+		}
+		man("manu",1,3,4,55,2);
+	</script>
+
+
+</body>
+</html>

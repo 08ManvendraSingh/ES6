@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<!-- Filter Method -->
+	<!-- it is an array method so it use only on array -->
+	<!-- filter method returns an new array -->
+	<!-- it does not change the original array -->
+	<!-- it does not execute the function for empty elements -->
+	<!-- it returns all of the items which pass the condition specified in the callback. -->
+	<script type="text/javascript">
+		// 1.eg filter values greater than five
+		var a7=[1,2,3,4,5,6,8,8,9];
+		let newarr2=a7.filter((x)=>
+				x>5
+			);
+		console.log(newarr2);
+		// 2.eg filter odd values
+		var a8=[1,,32,5,7,8,2];
+		let newarr3=a8.filter((x)=>
+				x%2
+			);
+		console.log(newarr3);
+		// 3.eg filter even values
+		var a9=[1,,32,5,7,8,2];
+		let newarr4=a9.filter((x)=>
+				x%2==0
+			);
+		console.log(newarr4);
+		// 4.eg find name whose age is greater than 30
+	    var a10=[
+	        {firstname : "Malcom", lastname: "Reynolds",age:21},
+	        {firstname : "Kaylee", lastname: "Frye",age:31},
+	        {firstname : "Jayne", lastname: "Cobb",age:30},
+	        {firstname:'aaron',lastname:'finch',age:39}
+	    ]
+	    let newarr5=a10.filter((x)=>
+	    		x.age>30).map((z)=>z.firstname);
+	    console.log(newarr5);
+	</script>
+</body>
+</html>

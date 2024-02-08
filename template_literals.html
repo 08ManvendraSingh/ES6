@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<!-- Template literals -->
+
+	<!-- in template literals we use back-ticks (``) instead of quotes ("") in string -->
+	<script type="text/javascript">
+		var a=`hello world`;
+		console.log(a);
+	</script>
+
+	<!-- using template liiteral we can use single as well as double quotes inside string -->
+	<script type="text/javascript">
+		var a=`he's often called "hello world"`;
+		console.log(a);
+	</script>
+
+	<!-- using template string we can write multline strings-->
+	<script type="text/javascript">
+		var a=`hello
+		world`;
+		console.log(a);
+	</script>
+
+	<!-- using template literals we can use interpolate variable into string  -->
+	<!-- syntax ${} -->
+	<script type="text/javascript">
+		var a1='hello';
+		var a2='world';
+		var a=`${a1} ${a2}`;
+		console.log(a);	
+	</script>
+
+	<!-- using template string we can use expressions in string-->
+	<script type="text/javascript">
+		var a1= 10;
+		var a2= 0.25;
+		var a= `Total: ${(a1 * (1 + a2)).toFixed(2)}`;
+		console.log(a);
+	</script>
+
+
+</body>
+</html>
